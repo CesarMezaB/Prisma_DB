@@ -59,6 +59,11 @@ app.get('/missionCommanders', async (req, res) => {
     const allCommanders =  await prisma.missionCommander.findMany({});
     res.json(allCommanders);
   })
+  app.get('/missionCommanders/:id', async (req, res) => {
+    const id = req.params.id;
+    const commander = await prisma.missionCommander.findUnique({where: {id: parseInt(id)}});
+    res.json(commander);
+  });
 
   
 
