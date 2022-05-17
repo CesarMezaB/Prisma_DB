@@ -91,6 +91,32 @@ const prisma = new PrismaClient();
         },
       });
 
+      const commander = await prisma.MCommander.upsert({
+        where: { name: 'mc1' },
+        update: {},
+        create: {
+         name: 'mc1',
+                 username:'commander1',
+                 mainStack:'JavaScript',
+                 currentEnrollment: false,
+                 hasAzureCertification:false
+        },
+      });
+
+      const commander1 = await prisma.MCommander.upsert({
+        where: { name: 'mc2' },
+        update: {},
+        create: {
+         name: 'mc2',
+                 username:'commander2',
+                 mainStack:'Java',
+                 currentEnrollment: true,
+                 hasAzureCertification:false
+        },
+      });
+
+      
+
     console.log('Create 3 explorers');
     console.log('Create Mission Commanders')
   } catch(e) {
