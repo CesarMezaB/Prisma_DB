@@ -109,6 +109,11 @@ app.delete('/missionCommanders/:id', async (req, res) => {
 	return res.json({message: "Eliminado correctamente"});
 });
 
+app.get('/commanders', async (req, res) => {
+  const allCommanders =  await prisma.MCommander.findMany({});
+  res.json(allCommanders);
+});
+
 
 
 app.listen(port, () => {
