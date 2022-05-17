@@ -114,6 +114,13 @@ app.get('/commanders', async (req, res) => {
   res.json(allCommanders);
 });
 
+app.get('/commanders/:id', async (req, res) => {
+  const id = req.params.id;
+  const explorer = await prisma.MCommander.findUnique({where: {id: parseInt(id)}});
+  res.json(explorer);
+});
+
+
 
 
 app.listen(port, () => {
