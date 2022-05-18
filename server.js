@@ -120,6 +120,19 @@ app.get('/commanders/:id', async (req, res) => {
   res.json(explorer);
 });
 
+app.post('/commanders', async (req, res) => {
+  const commander = {
+    name: req.body.name,
+    username: req.body.username,
+    mainStack: req.body.mainStack,
+    currentEnrollment: req.body.currentEnrollment,
+    hasAzureCertification: req.body.hasAzureCertification
+   };
+  const message = 'Commander creado.';
+  await prisma.MCommander.create({data: commander});
+  return res.json({message});
+});
+
 
 
 
