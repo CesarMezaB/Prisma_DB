@@ -2,8 +2,8 @@
 
 ##  Instalación
 - Denben terner instalado node js una vez que lo hayas clonado el proyecto ejecuta el comando **npm install** estro instalara las dependencias del proyecto ya que se instalara express y Prisma D
-- Inicializa prisma con el siguiente comando npx prisma init de esta manera se creare el archivo** .env** y la carpeta de **prisma**
-- Crea una base de datos que se llame** explorers_api**
+- Inicializa prisma con el siguiente comando npx prisma init de esta manera se creare el archivo **.env** y la carpeta de **prisma**
+- Crea una base de datos que se llame **explorers_api**
 - Modifica el archivo .env, coloca tu usuario y password:
 **.env** este archivo es el que hará posible la conexión a tu db, para ello necesitas haber creado la db **explorers_api**
 - Para inicilizar prisma ejecuta el siguiente comando** npx prisma migrate dev --name init** esto creara las siguiente tablas en tu base de datos **Explorer, MissionCommander y MCommander** y esto tambien creara  la siguiente estructra de carpeta **prisma/migrations/**
