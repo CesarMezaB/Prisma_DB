@@ -10,6 +10,6 @@
 ## Introduccion 
 Este proyecto es la creacion de una Api que va a ser llamado por un cliente que se escuentra [aquí](https://github.com/CesarMezaB/client-launchx "aquí") ya que podra editar, eliminar, crear y traer un usuario explorer o mission commander
 ## Funcionamiento
-Corre el archivo seed.js de la siguiente manera** node prisma/seed.js** y verifica que ahora las tablas se llenan con los datos que se encuentran allí como registros.
+Corre el archivo seed.js de la siguiente manera**node prisma/seed.js** y verifica que ahora las tablas se llenan con los datos que se encuentran allí como registros.
 
- Ahora corre el server **node server.js** y accede a localhost:3000, verifica que recibas un mensaje y de esta manera pudes probar los endPoints que se encuentran en el archivo server.js por ejemplo localhost:3000/explorers/:id etc.
+ Ahora corre el server **node server.js** y accede a localhost:3000, verifica que recibas un mensaje y de esta manera pudes probar los endPoints que se encuentran en el archivo **server.js** por ejemplo **localhost:3000/explorers/:id** etc.
